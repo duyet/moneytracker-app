@@ -52,8 +52,20 @@ angular.module('moneytracker.controllers', [])
   ];
 })
 
+.controller('HomeCtrl', function($scope, $window) {
+  $scope.dashboard = {
+    income: 1256,
+    outcome: 4562
+  };
+})
+
 .controller('AboutCtrl', function($scope, $window) {
   $scope.moneytracker = $window.moneytracker;
+})
+
+.controller('SettingCtrl', function($scope, $window) {
+  $scope.moneytracker = $window.moneytracker;
+
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {

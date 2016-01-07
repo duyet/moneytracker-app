@@ -2,7 +2,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('moneytracker', ['ionic', 'moneytracker.controllers'])
+angular.module('moneytracker', ['ionic', 'ionic-material', 'moneytracker.controllers'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -34,7 +34,8 @@ angular.module('moneytracker', ['ionic', 'moneytracker.controllers'])
         url: '/home',
         views: {
             'menuContent': {
-                templateUrl: 'templates/home.html'
+                templateUrl: 'templates/home.html',
+                controller: 'HomeCtrl'
             }
         }
     })
@@ -45,6 +46,16 @@ angular.module('moneytracker', ['ionic', 'moneytracker.controllers'])
             'menuContent': {
                 templateUrl: 'templates/about.html',
                 controller: 'AboutCtrl'
+            }
+        }
+    })
+
+    .state('app.setting', {
+        url: '/setting',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/setting.html',
+                controller: 'SettingCtrl'
             }
         }
     })

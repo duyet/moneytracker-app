@@ -1,5 +1,34 @@
 <ion-view view-title="Money tracker">
-  <ion-content padding="true">
-    <h1>Playlist</h1>
+  <ion-content>
+  <div class="list list-inset">
+
+    <a class="item" href="#/app/dashboard">
+      <strong>Dashboard</strong><br />
+      <i>Tap to view</i>
+    </a>
+
+    <div class="item">
+    	Income
+    	<span class="item-note balanced">
+	      {{dashboard.income * 1000 | number}}
+	    </span>
+	</div>
+
+	<div class="item">
+    	Outcome
+    	<span class="item-note assertive">
+	      {{dashboard.outcome * 1000 | number}}
+	    </span>
+	</div>
+
+	<div class="item">
+    	
+    	<span class="item-note royal">
+	      {{(dashboard.income - dashboard.outcome) * 1000 | number}}
+	    </span>
+	</div>
+
+</div>
+
   </ion-content>
 </ion-view>
